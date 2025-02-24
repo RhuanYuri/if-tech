@@ -1,10 +1,12 @@
+import { NavBar } from "@/componets/navbar/navbar";
 import "../global.css"
 
 import type { Metadata } from "next";
 import { Montserrat, Oxanium } from "next/font/google"
+import { SideBar } from "@/componets/sidebar/sidebar";
 
 export const metadata: Metadata = {
-  title: "devstage"
+  title: "IF Tech"
 };
 
 const oxanium = Oxanium({
@@ -26,9 +28,14 @@ export default function PrivateLayout({
 }>) {
   return (
     <html lang="en" className={`${oxanium.variable} ${montserrat.variable}`}>
-      <body className="bg-gray-900 text-gray-100 antialiased bg-[url(/background.png)] bg-no-repeat bg-top md:bg-right-top">
-      <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
+      <body className="bg-gray-900 text-gray-100 antialiased bg-gray-800 bg-no-repeat bg-top md:bg-right-top">
+      <main className="flex flex-col h-screen bg-gray-900 text-gray-100 font-default">
+        <NavBar />
+        <div className="flex flex-1 overflow-hidden">
+        <SideBar />
         {children}
+        </div>
+        
       </main>
       </body>
     </html>

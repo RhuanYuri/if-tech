@@ -5,7 +5,7 @@ import { Montserrat, Oxanium } from "next/font/google"
 
 
 export const metadata: Metadata = {
-  title: "devstage"
+  title: "IF Tech"
 };
 
 const oxanium = Oxanium({
